@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerImage{
+    height: 40%;
+}
+
+.containerHeading{
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+}
+.inputArea input{
+    margin: 5px;
+}
+
+.inputWithIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dateInput {
+    padding-right: 30px; /* Add some padding to the right to avoid text overlap with the icon */
+  }
+  .buttonArea{
+    color: white;
+    width: 34.5%;
+    font-weight: normal;
+  }
+  .description{
+    font-size: small;
+    color: gray;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .description a{
+    color: #0fa37f;
+  }
+
+  .footer{
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+  }
+  
+  .footer a{
+    color: #0fa37f;
+  }

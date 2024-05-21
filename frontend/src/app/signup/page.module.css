@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerHeading{
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.containerImage{
+    height: 40%;
+}
+
+.inputArea{
+    width: 24%;
+    padding: 30px;
+}
+
+.buttonArea{
+    width: 20%;
+    color: white;
+    font-size: medium;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.container p{
+    font-size: 12px;
+    padding: 10px;
+}
+
+.container a{
+    color: #0fa37f;
+}
+
+.line{
+    width: 100%;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.or{
+    display: flex;
+    flex-direction: row;
+    width: 21%;
+    font-size: small;
+    color: grey;
+}
+
+.providers{
+    margin: 20px;
+    width: 20%;
+}
+
+.providerGoogle{
+    border: 0.5px solid grey;
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.providerGoogle p{
+    font-size: small;
+    padding-left: 10px;
+    font-family: sans-serif;
+    color: black;
+}
+
+.providerGoogle img{
+    width: 10%;
+    height: 10%;
+    padding-left: 10px;
+}
+
+.inputArea input{
+    margin: 10px;
+}
