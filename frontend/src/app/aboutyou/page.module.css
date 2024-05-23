@@ -13,15 +13,20 @@
 .containerHeading{
     font-size: xx-large;
     font-weight: 700;
+    color: black;
 }
 
 .inputArea{
     display: flex;
     flex-direction: row;
     width: 35%;
+    background-color: white;
+    color: black;
 }
 .inputArea input{
     margin: 5px;
+    background-color: white;
+    color: black;
 }
 
 .inputWithIcon {

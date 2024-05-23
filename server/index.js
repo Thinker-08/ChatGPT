@@ -37,8 +37,6 @@ const connectToSupabase = async () => {
 const connectToOpenAi = async () => {
   try {
     const openAiClient = new openAi({
-      organization: process.env.OPENAI_ORGANIZATION,
-      project: process.env.OPENAI_PROJECT,
       apiKey: process.env.API_KEY
     });
     console.log('Connected to OpenAI');

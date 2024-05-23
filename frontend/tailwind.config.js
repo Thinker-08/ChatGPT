@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -66,6 +65,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundColor: {
+        "login-green": "var(--login-green)",
       },
       borderRadius: {
         lg: "var(--radius)",

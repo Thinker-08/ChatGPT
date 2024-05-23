@@ -43,6 +43,7 @@ const userController = {
       return res.status(500).json({ message: "Something went wrong when verifying user!", error});
     }
   },
+
   signup: async (req, res) => {
     try {
       const supabaseClient = new supabase();
@@ -73,6 +74,7 @@ const userController = {
       return res.status(500).json({ message: "Something went wrong when creating user!", error });
     }
   },
+
   updateUser: async (req, res) => {
     try {
       const supabaseClient = new supabase();
@@ -93,6 +95,7 @@ const userController = {
       return res.status(500).json({ message: "Something went wrong when updating user!", error });
     }
   },
+
   logout: async (req, res) => {
     try {
       const supabaseClient = new supabase();
@@ -120,6 +123,7 @@ const userController = {
       return res.status(500).json({ message: "Something went wrong when logging out user!", error });
     }
   },
+
   login: async (req, res) => {
     try {
       const supabaseClient = new supabase();
@@ -141,6 +145,28 @@ const userController = {
     } catch (error) {
       console.log(error);
       return res.status(500).json({ message: "Something went wrong when logging in user!", error });
+    }
+  },
+
+  toggleDarkMode: async (req, res) => {
+    try {
+      const supabaseClient = new supabase();
+      const { accessToken, toggle } = req.body;
+      if (!accessToken) {
+        return res.status(400).json({ message: "Access token is required!" });
+      }
+      const userId = accessToken.id;
+      console.log(accessToken)
+      let { error } = await supabaseClient.from("users").update({dark_mode: toggle}).eq("id", userId);
+      if (error) {
+        console.log(error.message);
+        throw new Error(error?.message);
+      };
+      const { data } = await supabaseClient.from("users").select("*").eq("id", userId);
+      res.status(200).json({ message: "Dark mode toggled successfully!", data });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ message: "Something went wrong when toggling dark mode!", error });
     }
   },
 };

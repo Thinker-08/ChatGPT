@@ -18,8 +18,8 @@ const buttonVariants = cva(
           "bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
         ghost: "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
-        signup: "bg-custom-green text-slate-0 hover:bg-custom-green-highlight/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
-        login: "bg-login-green text-slate-0 hover:bg-login-green-highlight/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 border border-gray-200 border-opacity-20",
+        signup: "bg-custom-green text-slate-0 hover:bg-custom-green-highlight/80 dark:bg-custom-green dark:text-slate-0 dark:hover:bg-slate-800/80",
+        login: "bg-login-green text-slate-0 hover:bg-login-green-highlight/80 dark:bg-login-green dark:text-slate-0 dark:hover:bg-slate-800/80 border border-gray-200 border-opacity-20",
       },
       size: {
         default: "h-10 px-4 py-2",

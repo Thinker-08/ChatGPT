@@ -4,11 +4,13 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: white;
 }
 
 .containerHeading{
     font-size: xx-large;
     font-weight: 700;
+    color: black;
 }
 
 .containerImage{
@@ -18,6 +20,7 @@
 .inputArea{
     width: 24%;
     padding: 30px;
+    color: black;
 }
 
 .buttonArea{
@@ -57,7 +60,11 @@
     margin: 20px;
     width: 20%;
 }
-
+.container p{
+    font-size: 12px;
+    padding: 10px;
+    color: black;
+}
 .providerGoogle{
     border: 0.5px solid grey;
     display: flex;
@@ -83,4 +90,5 @@
 
 .inputArea input{
     margin: 10px;
+    background-color: white;
 }

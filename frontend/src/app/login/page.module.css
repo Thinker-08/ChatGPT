@@ -4,11 +4,13 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: white;
 }
 
 .containerHeading{
     font-size: xx-large;
     font-weight: 700;
+    color: black;
 }
 
 .containerImage{
@@ -18,10 +20,12 @@
 .inputArea{
     width: 24%;
     padding: 30px;
+    color: black;
 }
 
 .inputArea input{
     margin: 10px;
+    background-color: white;
 }
 
 .buttonArea{
@@ -35,6 +39,7 @@
 .container p{
     font-size: 12px;
     padding: 10px;
+    color: black;
 }
 
 .container a{
