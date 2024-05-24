@@ -19,6 +19,7 @@ app.use(router);
 require('./app/routes')(router);
 
 app.get('/health', (req, res) => {
+  console.log(process.env);
   res.send('The app is running!');
 });
 
