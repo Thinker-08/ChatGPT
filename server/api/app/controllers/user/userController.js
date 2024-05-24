@@ -49,7 +49,10 @@ const userController = {
 
   signup: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { email, password } = req.body;
       if (!email || !password) {
         return res.status(400).json({ message: "Email and password are required!" });
@@ -80,7 +83,10 @@ const userController = {
 
   updateUser: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { firstName, lastName } = req.body;
       let accessToken = JSON.parse(req.body.accessToken);
       if (!firstName || !lastName || !accessToken) {
@@ -101,7 +107,10 @@ const userController = {
 
   logout: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { accessToken } = req.body;
       if (!accessToken) {
         return res.status(400).json({ message: "Access token is required!" });
@@ -129,7 +138,10 @@ const userController = {
 
   login: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { email, password } = req.body;
       if (!email) {
         return res.status(400).json({ message: "Email is required!" });
@@ -153,7 +165,10 @@ const userController = {
 
   toggleDarkMode: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { accessToken, toggle } = req.body;
       if (!accessToken) {
         return res.status(400).json({ message: "Access token is required!" });
