@@ -21,7 +21,7 @@ const AboutYou = () => {
     axios.post(`${Constants.API_URL}/${Constants.USER}/update-user`, {
         firstName: firstName,
         lastName: lastName,
-        accessToken,
+        accessToken: JSON.parse(accessToken),
       })
       .then((res) => {
         console.log(res?.data?.data?.[0]);
