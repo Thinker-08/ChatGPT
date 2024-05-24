@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index.js",
-    "vercel-build": "echo Hello"
+    "vercel-build": "node index.js && echo Hello"
   },
   "author": "",
   "license": "ISC",
