@@ -5,7 +5,10 @@ const { jwtDecode } = require("jwt-decode");
 const userController = {
   verifyUser: async (req, res) => {
     try {
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({
+        SUPABASE_URL: process.env.SUPABASE_URL,
+        SUPABASE_KEY: process.env.SUPABASE_KEY
+      });
       const { accessToken } = req.body;
       if (!accessToken) {
         return res.status(400).json({ message: "Access token is required!" });
