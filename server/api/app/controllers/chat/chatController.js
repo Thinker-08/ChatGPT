@@ -14,7 +14,7 @@ const chatController = {
       if (!userId) {
         return res.status(400).json({ message: "UserId us missing" });
       }
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
       const totalChats = await supabaseClient
         .from("chats")
         .select("*", "id(count)");
@@ -50,8 +50,8 @@ const chatController = {
           .status(400)
           .json({ message: "Prompt is missing in the request body" });
       }
-      const supabaseClient = new supabase();
-      const openAiClient = new openAi();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
+      const openAiClient = new openAi({ apiKey: process.env.API_KEY });
       const { data, error } = await supabaseClient
         .from("messages")
         .select("*")
@@ -143,7 +143,7 @@ const chatController = {
       if (!userId) {
         return res.status(400).json({ message: "UserId us missing" });
       }
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
       const { data, error } = await supabaseClient
         .from("chats")
         .select("*")
@@ -204,7 +204,7 @@ const chatController = {
           .status(400)
           .json({ message: "Chat ID is missing in the request body" });
       }
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
       const { data, error } = await supabaseClient
         .from("chats")
         .delete()
@@ -247,7 +247,7 @@ const chatController = {
           .status(400)
           .json({ message: "Chat ID is missing in the request body" });
       }
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
       const { data, error } = await supabaseClient
         .from("messages")
         .select("*")
@@ -278,7 +278,7 @@ const chatController = {
       if (!userId) {
         return res.status(400).json({ message: "UserId us missing" });
       }
-      const supabaseClient = new supabase();
+      const supabaseClient = new supabase({ SUPABASE_URL: process.env.SUPABASE_URL, SUPABASE_KEY: process.env.SUPABASE_KEY });
       const { data, error } = await supabaseClient.from("chats").select("*").eq("user_id", userId);
       if (error) {
         throw new Error(error.message);
