@@ -87,8 +87,7 @@ const userController = {
         SUPABASE_URL: process.env.SUPABASE_URL,
         SUPABASE_KEY: process.env.SUPABASE_KEY
       });
-      const { firstName, lastName } = req.body;
-      let accessToken = JSON.parse(req.body.accessToken);
+      const { firstName, lastName, accessToken } = req.body;
       if (!firstName || !lastName || !accessToken) {
         return res.status(400).json({ message: "First Name and Last Name are required!" });
       }
