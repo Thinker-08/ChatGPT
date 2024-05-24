@@ -8,7 +8,10 @@ const authHandler = async(req, res, next) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
   try {
-    const supabaseClient = new supabase();
+    const supabaseClient = new supabase({
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_KEY: process.env.SUPABASE_KEY
+    });
     if (accessToken.provider) {
       let { data, error } = await supabaseClient
         .from("users")
