@@ -1,5 +1,5 @@
 const Constants = {
-    API_URL: 'http://localhost:8080',
+    API_URL: 'https://server-theta-ten-42.vercel.app',
     USER: 'user',
     CHAT: 'chat',
 }
